@@ -1,0 +1,27 @@
+<div ng-controller="message">
+  <div>
+    <h2 style="text-align:center;margin-top:40px">Message Box</h2>
+    <table class="messageTable table table-striped table-hover">
+      <tr>
+        <th class="important" style="text-align:center">Important</th>
+        <th colspan="2" style="text-align:center">Sender</th>
+        <th colspan="2" style="text-align:center">Recipient</th>
+        <th>Title</th>
+        <th>Date</th>
+      </tr>
+      <tr ng-repeat="message in messages" ng-click="goto(message._id)">
+        <td class="important">
+          <img class="importantIcon" src="/app/app-content/img/clicked.png" ng-if="isImportant(message)" ng-click="flag(message._id, $event); $event.stopPropagation()">
+          <img class="importantIcon" src="/app/app-content/img/unclicked.png" ng-if="!isImportant(message)" ng-click="flag(message._id, $event); $event.stopPropagation()">
+        </td>
+        <td><img ng-src="{{message.sender_img}}" /></td>
+        <td>{{message.sender}}</td>
+        <td><img ng-src="{{message.recipient_img}}" /></td>
+        <td>{{message.recipient}}</td>
+        <td>{{message.title}}</td>
+        <td>{{message.created_at}}</td>
+      </tr>
+      
+    </table>
+  </div>
+</div>

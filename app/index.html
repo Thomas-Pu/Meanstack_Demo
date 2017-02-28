@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8" />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="app-content/app.css" rel="stylesheet" />
+</head>
+<body class="container" style="height:100%">
+    <!-- header -->
+    <header>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main ui-view style="height:100%"></main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- external scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/messageService.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+    <script src="/app/message.detail/message.controller.js"></script>
+    <script src="/app/message/message.js"></script>
+</body>
+</html>
