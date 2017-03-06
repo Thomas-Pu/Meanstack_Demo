@@ -19,7 +19,7 @@
             
             })
             .state('home.account', {
-                url: '/',
+                url: '/account',
                 templateUrl: 'account/index.html',
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',

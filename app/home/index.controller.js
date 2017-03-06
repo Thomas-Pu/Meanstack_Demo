@@ -5,9 +5,9 @@
         .module('app')
         .controller('Home.IndexController', Controller);
 
- Controller.$inject = ['UserService', '$rootScope','$location'];
+ Controller.$inject = ['UserService', '$rootScope','$location','$state'];
 
-    function Controller(UserService,$rootScope,$location) {
+    function Controller(UserService,$rootScope,$location,$state) {
         var vm = this;
 
         vm.user = null;
@@ -19,7 +19,8 @@
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
                 $rootScope.user=user;
-               $location.path('/account');
+               console.log("ceshi");
+               $state.go('home.account',{});
             });
         }
 

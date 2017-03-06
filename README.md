@@ -1,6 +1,6 @@
 Install Steps
 
-1. Download files/ git clone git@github.com:Thomase-Pu/meanstack-profile.git
+1. Download files
 
 2. Start Mongodb
 

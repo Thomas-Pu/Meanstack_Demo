@@ -125,7 +125,6 @@ app.put('/addComment', function(req, res) {
   res.send(message);
 });
 
-
 // make '/app' default route
 app.get('/', function (req, res) {
     return res.redirect('/app');
