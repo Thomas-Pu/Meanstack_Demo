@@ -1,7 +1,7 @@
 ﻿<h1>My Account</h1>
  <div ng-controller="Account.IndexController">
 
-      <form name="profileForm" ng-submit="vm.saveUser()" style="margin:0 auto; width:270px; margin-top:45px">
+      <form name="profileForm" ng-submit="vm.saveUser()" style="margin:0 auto; width:270px">
         <h3 class="form-signin-heading" style="text-align:center">Your profile</h3></br>
         <div class="form-group" ng-class="{ 'has-error' : profileForm.username.$dirty && profileForm.username.$error.required }">
           <label class="sr-only" >Username</label>
@@ -19,16 +19,6 @@
             <!-- <p style="color:green;margin-bottom:0" ng-show="validated">Valid username</p> -->
             <p style="color:red;margin-bottom:0" ng-show="invalidated">Invalid username</p>
           </div>
-        </div>
-        </br>
-        <div class="form-group" ng-class="{ 'has-error' : profileForm.pwd.$dirty && profileForm.pwd.$error.required }" >
-          <label class="sr-only">Password</label>
-          <input type="password" 
-                 name="pwd" 
-                 ng-model="vm.user.password" 
-                 class="form-control" 
-                 placeholder="Password"
-                 required>
         </div>
         </br>
         <div class="form-group" ng-class="{ 'has-error' : profileForm.firstname.$dirty && profileForm.firstname.$error.required }">
@@ -60,26 +50,6 @@
                  placeholder="Email Address"
                  required>
         </div>                
-        </br>
-        <div class="form-group" ng-class="{ 'has-error' : profileForm.phone.$dirty && profileForm.phone.$error.required }">
-          <label class="sr-only" >Phone</label>
-          <input type="text" 
-                 name="phone" 
-                 ng-model="vm.user.phone" 
-                 class="form-control" 
-                 placeholder="Phone"
-                 required>
-        </div>                 
-        </br>
-        <div class="form-group" ng-class="{ 'has-error' : profileForm.location.$dirty && profileForm.location.$error.required }">
-          <label class="sr-only" >Location</label>
-          <input type="text" 
-                 name="location" 
-                 ng-model="vm.user.location" 
-                 class="form-control" 
-                 placeholder="Location"
-                 required>
-        </div>
         </br>
         <div class="form-actions">
           <button ng-disabled="profileForm.$invalid" class="btn btn-md btn-primary btn-block" type="submit">Update accout</button>
