@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://localhost:27017/User",
+    "connectionString": "mongodb://thmspu:pudejun15605193770@ds155201.mlab.com:55201/user",
     "apiUrl": "http://localhost:3000/api",
     "secret": "ABCDEFG"
 }
