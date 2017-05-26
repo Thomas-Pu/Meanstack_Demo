@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://thomas:password@percy.mongo.xervo.io:27017/Gotyti5n",
+    "connectionString": "mongodb://localhost:27017/User",
     "apiUrl": "http://localhost:3000/api",
     "secret": "ABCDEFG"
 }
